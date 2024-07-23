@@ -1,0 +1,6 @@
+header nav .navbar-container .navbar {
+  background-color: #fff;
+  display: flex;
+  justify-content: end;
+  padding: 20px;
+}
