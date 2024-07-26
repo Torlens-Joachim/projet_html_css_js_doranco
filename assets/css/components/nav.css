@@ -1,6 +1,88 @@
-header nav .navbar-container .navbar {
+.navbar-container {
+  padding: 10px;
   background-color: #fff;
   display: flex;
-  justify-content: end;
-  padding: 20px;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  position: fixed; /* Je rends ma barre de navigation fixe */
+  top: 0;
+  left: 0;
+  z-index: 10; /*Je m'assure que la barre de navigation est au-dessus des autres éléments */
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.navbar-container p.logo {
+  margin-left: 20px;
+  font-size: 3rem;
+}
+
+.navbar-container p.logo span {
+  color: #000;
+}
+
+.navbar-container p.logo a {
+  color: orange;
+  text-decoration: none;
+}
+
+.navbar-container ul.navbar {
+  align-items: center;
+  display: flex;
+}
+
+.navbar-container ul.navbar .nav-item {
+  color: #000;
+  margin-top: 10px;
+  margin-right: 20px;
+  text-transform: capitalize;
+}
+
+.navbar-container ul.navbar .nav-item a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar-container ul.navbar i.chevron {
+  font-size: 0.9rem;
+}
+
+.navbar-container ul.navbar li.hovering-item a:hover {
+  padding-bottom: 5px;
+  border-bottom: solid 4px orange;
+}
+
+.navbar-container ul.navbar li.cta-booking {
+  padding: 10px 20px;
+  background-color: #000;
+  border-radius: 10px;
+  font-weight: 400;
+}
+
+.navbar-container ul.navbar li.cta-booking a {
+  color: #fff;
+}
+
+/* Accordéon CSS */
+.submenu {
+  text-transform: uppercase;
+  position: absolute;
+  min-width: 150px;
+  max-width: 800px;
+  background: #fff;
+  height: 0;
+  overflow: hidden;
+  overflow-y: auto;
+  transition: height 0.5s ease, padding 0.5s ease; /* Ajout de transition sur le padding */
+}
+
+.submenu.active {
+  z-index: 2;
+  height: 180px;
+  padding: 10px; /* Padding appliqué lors de l'activation */
+}
+
+.menu-item {
+  position: relative;
+  margin: 20px;
 }
